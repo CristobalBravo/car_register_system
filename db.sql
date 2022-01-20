@@ -85,6 +85,7 @@ CREATE TABLE IF NOT EXISTS `car_register_system_db`.`vehiculo` (
   `valor` INT NULL,
   `patente` VARCHAR(8) NOT NULL,
   `modelo` VARCHAR(45) NOT NULL,
+  `anio` DATE NOT NULL,
   `estado_vehiculo_id` INT NOT NULL,
   `marca_id` INT NOT NULL,
   `venta_id` INT NULL,
@@ -199,7 +200,7 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `car_register_system_db`.`estado_usuario` (
   `id` INT NOT NULL AUTO_INCREMENT,
-  `nombre` VARCHAR(45) NULL,
+  `nombre` VARCHAR(45) NOT NULL,
   PRIMARY KEY (`id`))
 ENGINE = InnoDB;
 
@@ -234,5 +235,3 @@ ENGINE = InnoDB;
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
-
-
